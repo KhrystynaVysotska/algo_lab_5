@@ -45,6 +45,12 @@ class BruteForceAlgorithmTest(unittest.TestCase):
         substring_borders = find_start_and_end_of(input_string, input_substring)
         self.assertEqual([(0, 2)], substring_borders)
 
+    def test_many_entries_of_one_letter(self):
+        input_string = "bbbb"
+        input_substring = "b"
+        substring_borders = find_start_and_end_of(input_string, input_substring)
+        self.assertEqual([(0, 0), (1, 1), (2, 2), (3, 3)], substring_borders)
+
 
 if __name__ == '__main__':
     unittest.main()
