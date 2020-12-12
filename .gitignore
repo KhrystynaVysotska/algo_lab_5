@@ -1,4 +1,5 @@
 *.idea
 *.in
 *.out
+utils/__pycache__/
 /venv
