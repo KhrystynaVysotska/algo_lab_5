@@ -33,6 +33,18 @@ class BruteForceAlgorithmTest(unittest.TestCase):
         substring_borders = find_start_and_end_of(input_string, input_substring)
         self.assertEqual([(17, 19), (40, 42)], substring_borders)
 
+    def test_empty_substring(self):
+        input_string = "abcd"
+        input_substring = ""
+        substring_borders = find_start_and_end_of(input_string, input_substring)
+        self.assertEqual([], substring_borders)
+
+    def test_long_substring(self):
+        input_string = "abcd"
+        input_substring = "abc"
+        substring_borders = find_start_and_end_of(input_string, input_substring)
+        self.assertEqual([(0, 2)], substring_borders)
+
 
 if __name__ == '__main__':
     unittest.main()
