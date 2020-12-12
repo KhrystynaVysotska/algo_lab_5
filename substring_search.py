@@ -6,6 +6,8 @@ def find_start_and_end_of(string: str, substring: str) -> List:
     substring_borders = []
     string_length = len(string)
     substring_length = len(substring)
+    if substring_length == 0:
+        return substring_borders
     for string_index in range(string_length - substring_length + 1):
         for substring_index in range(substring_length):
             if string[string_index + substring_index] != substring[substring_index]:
